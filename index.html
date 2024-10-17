@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>
+
+    <link
+
+ href="https://fonts.googleapis.com/css2?
+ family=Poppins&display=swap"
+ rel="stylesheet"
+    />
+
+<link rel="stylesheet" href="style.css" />
+<title>Dictionary 1</title>
+</head>
+<body>
+    <h1 class="title">Dictionary App <i class="fa-solid fa-book-open" style="color: red;"></i></h1>
+<!-- Container box in the top -->    
+<!-- Modal Structure -->
+<div id="feedback-modal" class="modal">
+    <div class="modal-content2">
+        <span class="close-btn">&times;</span>
+        <h2>Feedback</h2>
+        <h5>Place a word that "YOU" would like to see or missing in the Dictionary</h5>
+        <form id="feedback-form">
+            <label for="word">Enter a Word:</label>
+            <input type="text" id="word" placeholder="Enter a Word" required>
+
+            <label for="definition">Enter Definition:</label>
+            <input type="text" id="definition" placeholder="Enter Definition" required>
+
+            <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+        </form>
+    </div>
+</div>
+    <!-- Container box in the middle -->
+    <audio id="sound"></audio>
+    <div class="container">
+        <button id="info-btn" class="info-button"><i class="fa-solid fa-info"></i></button>
+        <div class="modal-content1" id="info-modal">
+            <span class="close-btn">&times;</span>
+            <h2>Documentation</h2>
+            <p>     This is a dictionary app. a small project created by using https://dictionaryapi.dev/ Public API's 
+                you can pull a request using the provided Syntax https://api.dictionaryapi.dev/api/v2/entries/en/<!--provide-->
+                Limitation
+                Disclaimer "some feature like audio or given an example or the word itself may not work as intended
+                please keep in mind this is work in progress"
+                 </p>
+        </div>
+        <!--sEARCH-->
+        <div class="search-box">
+        <input 
+        type="text" 
+        placeholder="Type here"
+        id="inp-word"
+        />
+        <button id="search-btn">Search</button>
+        </div> 
+        <div class="result" id="result"></div>
+    <!--fEED-->
+        <div class="menu-container">
+            <button id="feedback-btn" class="icon-button">
+                <i class="fa-duotone fa-solid fa-bookmark"></i>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+ </body>
+</html>
